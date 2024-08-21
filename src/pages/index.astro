@@ -5,21 +5,17 @@ import Card from '../components/Card.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
-import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
-import astro from '../assets/about-astro.png'
+import astro from '../assets/cartoonize_IMG_4002 (1).png'
 
-import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = ['Java', 'SQL', 'Python', 'JavaScript', 'HTML', 'CSS','ReactJS', 'Junit5', 'Mockito' ]
+const tools = ['Git/Github', 'JIRA', 'POSTMAN', 'AWS']
+const database = ['DBMS','Mysql', 'DynamoDB', 'Cloudsearch']
+const os_skills = ['Windows', 'Mac OS', 'Linux']
+const datascienceSkills = ['Python for Data Science', 'Jupyter Notebook', 'Google Colab', 'Supervised Learning', 'Model Building and Evaluation']
 
-const MAX_POSTS = 10
-const allPosts = await getAllPosts()
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -33,9 +29,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
+				<h1 class='text-3xl font-bold'>Naveen's Portfolio</h1>
 				<a
-					href='https://github.com/srleom/astro-theme-resume.git'
+					href='mailto:kgnaveen2002@gmail.com'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 				>
 					<span class='relative flex items-center justify-center'>
@@ -45,10 +41,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
 					</span>
 
-					<p class='font-medium'>Get free template</p>
+					<p class='font-medium'>Connect with me </p>
 				</a>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
+					<Label title='Data Science Graduate Student'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -56,7 +52,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='Boston, MA'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -67,7 +63,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<Label
 						title='Connect on Linkedin'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
+						href='https://www.linkedin.com/in/naveen-kavitha-gunasekaran-53a996206/'
 						target='_blank'
 					>
 						<svg
@@ -87,77 +83,85 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				As a passionate data enthusiast, I find joy in turning raw data into meaningful insights that drive smarter decisions. 
+				My journey in data science is a continuous adventure, fueled by curiosity and a love for uncovering the stories hidden within the numbers. 📚🔍	
+			</p>
+			<p class='text-muted-foreground'>
+				When I'm not deep into data analysis, you might find me curled up with a fantasy novel or honing my chess strategies. ♟️📖 
+				I believe in embracing every challenge with a sense of wonder and excitement, finding pleasure in solving even the most complex problems.	
+			</p>
+			<p class='text-muted-foreground'>
+				I love balancing the analytical with the creative, believing that each day presents a new chance to learn and grow. 🚀✨ 
+				Whether it’s exploring new technologies or enjoying life's little moments, I’m always up for the next adventure.	
 			</p>
 		</Section>
-		{
-			allPostsByDate.length > 0 && (
-				<Section title='Posts'>
-					<ul class='flex flex-col gap-y-2'>
-						{allPostsByDate.map((p) => (
-							<li class='flex flex-col gap-x-2 sm:flex-row'>
-								<PostPreview post={p} />
-							</li>
-						))}
-					</ul>
-				</Section>
-			)
-		}
-
 		<Section title='Experience'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='Amazon'
+				subheading='Software Development Engineer Intern'
+				date='Jan 2023 - Jun 2023'
+				imagePath='/src/assets/AmazonLogo.jpeg'
+				altText='Amazon'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
+						Enhanced the Amazon seller homepage using React JS, JavaScript, and TypeScript
+						<li>Established Cloud Search and Dynamo tables on multiple regions for database management</li>
+						<li>Created backend API with Java Spring Boot and Coral, performing backend unit tests with JUnit and Mockito</li>
+						<li>Implemented automated synchronization for data changes between Cloud Search and Dynamo across regions</li>
+						<li>Optimized system performance, reducing synchronization time from 4 hours to 30 minutes for 300 million data entries</li>
 					</li>
 				</ul>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='Fourkites'
+				subheading='Software Developer Intern'
+				date='Aug 2022 - Jan 2023'
+				imagePath='/src/assets/Fourkites.jpeg'
+				altText='Fourkites'
 				imageClass='h-12 w-auto md:-left-16'
-			/>
+				>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Led the migration of the team's EC2 instances to gravitational type A1 instances for cost optimization
+						<li>Developed an automated script to regularly scan and eliminate redundant data from S3 buckets</li>
+					</li>
+				</ul>
+			</Card>
+			<Card
+				heading='Northeastern University'
+				subheading='Teaching Assistant, Foundations of Data Science'
+				date='May 2024 - Dec 2024'
+				imagePath='/src/assets/Northeastern.png'
+				altText='Northeastern'
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Evaluated student assignments and provided constructive feedback, ensuring a clear understanding of foundational data science concepts
+						<li>Conducted regular office hours to assist students with course material, assignment queries, and conceptual understanding, fostering a supportive learning environment</li>
+						<li>Developed and reviewed solutions for assignment questions, ensuring accuracy and clarity to aid student comprehension and learning</li>
+					</li>
+				</ul>
+			</Card>
 		</Section>
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='Northeastern University, Khoury College of Computer Sciences'
+				subheading='Masters in Data Science'
+				date='Jan 2024 - Dec 2025'
+				imagePath='/src/assets/Northeastern.png'
+				altText='Northeastern'
 				imageClass='h-12 w-auto md:-left-16'
 			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
-				</ul>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
+				heading='Sri Krishna College of Engineering and Technology'
+				subheading='Bachelor of Technology, Information Technology'
+				date='Aug 2019 - Jun 2023'
+				imagePath='/src/assets/SKCET.jpeg'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			/>
@@ -166,56 +170,95 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<Section title='Projects'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 				<ProjectCard
-					href='https://www.google.com'
-					heading='Consectetur'
-					subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-					imagePath='/src/assets/coming-soon.png'
+					href='https://github.com/naviinkg/EventFinder'
+					heading='EventFinder'
+					subheading='Event Finder is a full-stack web application that allows users to browse, create, and manage events. The application integrates with Auth0 for user authentication, Ticketmaster for gathering more events and provides a seamless experience for managing events, including payment processing, user profiles, event management.'
+					imagePath='/src/assets/EventFinder.png'
 					altText='Example'
 					class='w-full sm:w-1/2'
 				/>
 				<ProjectCard
+					href='https://github.com/naviinkg/Health-Indicators-Diabetes'
+					heading='Diabetes Prediction using Health Indicators'
+					subheading='This project involves the application of machine learning techniques to analyze health indicators and predict health outcomes based on a dataset. The objective is to build a model that can accurately predict the status of individual health based on various input features. The analysis includes preprocessing the data, selecting appropriate features, training models, and evaluating their performance.'
+					imagePath='/src/assets/Diabetes-prediction-using-Machine-Learning.jpg'
+					altText='Example'
+					class='w-full sm:w-1/2'
+				/>
+				
+			</div>
+			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+				<ProjectCard
+					href='https://github.com/naviinkg/Diabetes-Prediction-using-SVM'
+					heading='Diabetes Prediction using SVM'
+					subheading='Analyzed a diabetes dataset using SVM to predict the Outcome (diabetes or no diabetes).Performed data cleaning, exploratory analysis, and hyperparameter tuning to optimize the SVM model.'
+					imagePath='/src/assets/Diabetes SVM.jpeg'
+					altText='Example'
+					class='w-full sm:w-1/2'
+				/>
+				<ProjectCard
+					href='https://github.com/naviinkg/Airlines-On-time-Performance'
+					heading='Airlines Ontime Performance'
+					subheading='Explored 2019 airline on-time data for flights from Arizona, Nevada, and California, analyzing factors like monthly flight patterns and popular routes. Evaluated departure and arrival delays for top airlines, identifying carriers with higher average delays. Investigated travel patterns and delays for 3 specific aircraft to uncover operational trends.'
+					imagePath='/src/assets/Airlines_Ontime_Performance.jpeg'
+					altText='Example'
+					class='w-full sm:w-1/2'
+				/>
+				<!-- <ProjectCard
 					as='div'
 					heading='Coming soon...'
 					subheading=''
 					imagePath='/src/assets/coming-soon.png'
 					altText='Lorem, ipsum dolor sit'
 					class='w-full sm:w-1/2'
-				/>
+				/> -->
 			</div>
 		</Section>
 
 		<Section title='Certifications'>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
+				heading='Spring Framework with SpringBoot'
+				subheading='Udemy Certified'
 				imagePath='/src/assets/about-astro.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
 			/>
 			<Card
+				as='a'
+				heading='Machine Learning Onramp'
+				imagePath='/src/assets/about-astro.png'
+				altText='Lorem, ipsum dolor sit'
+				imageClass='h-11 w-auto md:-left-16'
+			/>
+			<Card
+				as='a'
+				heading='Supervised Machine Learning.'
+				subheading='Coursera Certified'
+				imagePath='/src/assets/about-astro.png'
+				altText='Lorem, ipsum dolor sit'
+				imageClass='h-11 w-auto md:-left-16'
+			/>
+			<!-- <Card
 				as='a'
 				heading='Lorem ipsum, dolor sit amet'
 				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
 				date='Mar 2029 - Mar 2032'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://www.google.com'
-			/>
+			/> -->
 		</Section>
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='Tools' skills={tools} />
+			<SkillLayout title='Database' skills={database} />
+			<SkillLayout title='OS' skills={os_skills} />
+			<SkillLayout title='Data Science' skills={datascienceSkills} />
 		</Section>
 	</div>
 	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
+		href='mailto:kgnaveen2002@gmail.com'
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 	>
 		<span class='relative flex items-center justify-center'>
@@ -225,6 +268,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
 		</span>
 
-		<p class='font-medium'>Get free template</p>
+		<p class='font-medium'> Connect with me </p>
 	</a>
 </PageLayout>
